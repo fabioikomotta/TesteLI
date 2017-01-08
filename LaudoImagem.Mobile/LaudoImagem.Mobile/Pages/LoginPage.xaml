@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:LaudoImagem.Mobile"
+             x:Class="LaudoImagem.Mobile.LoginPage"
+             Title="Login"
+             NavigationPage.HasNavigationBar="False">
+
+
+    <ScrollView >
+        <StackLayout >
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+            </StackLayout.Padding>
+            <Image Source="{local:ImageResource LaudoImagem.Mobile.Images.SimplesECompleto-14.png}" WidthRequest="253" HeightRequest="56"/>
+            <Image Source="{local:ImageResource LaudoImagem.Mobile.Images.LogosSuite-13.png}" WidthRequest="158" HeightRequest="80" />
+
+
+            <StackLayout Padding="20,0,20,0">
+                <Label Text="Visualize os exames, cadastros, capture imagens e elabore laudos com o Laudo &amp; Imagem Mobile." FontSize="Small" />
+                <Label Text="Se ainda não estiver cadastrado utilize o login abaixo para conhecer o programa." FontSize="Small"/>
+            </StackLayout>
+            <StackLayout Padding="20,20,20,0">
+                <Label Text="Código cliente:" FontSize="Micro" TextColor="Gray"/>
+                <Entry Text="0604BSRP" FontSize="Small"/>
+
+                <Label Text="E-mail:" FontSize="Micro" TextColor="Gray"/>
+                <Entry Text="teste.mobile@laudoimagem.com.br"  FontSize="Small" />
+
+                <Label Text="Senha:" FontSize="Micro" TextColor="Gray" />
+                <Entry Text="123456" IsPassword="True" FontSize="Small" />
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                    <Label Text="Guardar dados login: " VerticalOptions="Center" FontSize="Small"  />
+                    <Switch x:Name="swArmazenarLogin" Toggled="swArmazenarLogin_Toggled"  VerticalOptions="Center" IsToggled="False"/>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout Padding="0,10,0,50">
+                <Button Text="Entrar" x:Name="btnLogin" Clicked="btnLogin_Clicked" HorizontalOptions="Center" 
+                    TextColor="White"
+                    BackgroundColor="Green" BorderColor="Lime"
+                    WidthRequest="120"
+                    />
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

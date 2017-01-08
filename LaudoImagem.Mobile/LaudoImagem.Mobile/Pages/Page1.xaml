@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LaudoImagem.Mobile.Page1"
+             Title="Macroscopia">
+
+    <ScrollView>
+        <StackLayout Padding="10,10,10,0">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End">
+                <Label Text="Finalizado: " VerticalOptions="Center" FontSize="Small" />
+                <Switch x:Name="swFinalizado" Toggled="swFinalizado_Toggled"  VerticalOptions="Center" IsToggled="False"/>
+            </StackLayout>
+            <StackLayout Padding="0,10,0,0">
+                <Frame OutlineColor="Black" >
+                    <Frame.Content>
+                        <Editor x:Name="editor1" HeightRequest="300" />
+                    </Frame.Content>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
